@@ -1,14 +1,16 @@
-const app = document.getElementById('app');
+'use client';
 
-function Header(props)
-{
+import { useState } from 'react';
+
+function Header(props) {
 	return (<h1>{props.title}</h1>);
 }
 
-function HomePage()
-{
+
+
+export default function HomePage() {
 	const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-	const [likes, setLikes] = React.useState(0);
+	const [likes, setLikes] = useState(0);
 
 	function handleClick() 
 	{
@@ -29,5 +31,3 @@ function HomePage()
 		</div>
 	);
 }
-const root = ReactDOM.createRoot(app);
-root.render(<HomePage />);
